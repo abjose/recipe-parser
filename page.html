@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="page.css" type="text/css">
+  </head>
+  <body>
+    {{ title }}
+
+    <div id="ingredients">
+      ingredients
+      <ul>
+        {% for ingredient in ingredients %}
+        <li>
+          <input type="checkbox">
+          <label class="strikethrough">{{ ingredient }}</label>
+        </li>
+        {% else %}
+          <li><em>couldn't find ingredients</em></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div id="instructions">
+      instructions
+      <ol>
+        {% for instruction in instructions %}
+        <li>
+          <input type="checkbox">
+          <label class="strikethrough">{{ instruction }}</label>
+        </li>
+        {% else %}
+          <li><em>couldn't find instructions</em></li>
+        {% endfor %}
+      </ol>
+    </div>
+
+  </body>
+  <!-- <script language="javascript" type="text/javascript" src="flog.js"></script> -->
+</html>
